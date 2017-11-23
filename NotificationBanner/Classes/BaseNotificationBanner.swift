@@ -153,7 +153,7 @@ public class BaseNotificationBanner: UIView {
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(onOrientationChanged),
-                                               name: NSNotification.Name.UIDeviceOrientationDidChange,
+                                               name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation,
                                                object: nil)
     }
     
@@ -163,7 +163,7 @@ public class BaseNotificationBanner: UIView {
     
     deinit {
         NotificationCenter.default.removeObserver(self,
-                                                  name: NSNotification.Name.UIDeviceOrientationDidChange,
+                                                  name: NSNotification.Name.UIApplicationDidChangeStatusBarOrientation,
                                                   object: nil)
     }
     
